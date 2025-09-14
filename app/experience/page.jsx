@@ -3,10 +3,10 @@
 import { BsArrowDownRight } from "react-icons/bs";
 import Link from "next/link";
 
-const Services = () => {
+const Experience = () => {
   return (
-    <div>services page</div>
+    <div>experience page</div>
   )
 }
 
-export default Services;
+export default Experience;
