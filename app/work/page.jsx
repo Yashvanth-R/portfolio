@@ -27,7 +27,7 @@ const projects = [
   {
     name: "Project 2",
     category: "Frontend and Backend",
-    title: "Notes taking app",
+    title: "Form Builder",
     description: "A beautiful, modern note-taking application built with Next.js and FastAPI. Create, organize, and manage your personal notes with an intuitive interface and powerful search functionality.",
     stack: [{name: "Next.js"}, {name: "TypeScript"}, {name: "Zustand"}, {name: "Tailwind CSS"}, {name: "Axios"}, {name: "FastAPI"}, {name:"MongoDB"}, {name:"JWT Authentication"}, {name:"Pydantic"}, {name:"Uvicorn"}],
     image: "",
@@ -37,7 +37,7 @@ const projects = [
   {
     name: "Project 3",
     category: "Frontend and Backend",
-    title: "Notes taking app",
+    title: "Product Store",
     description: "A beautiful, modern note-taking application built with Next.js and FastAPI. Create, organize, and manage your personal notes with an intuitive interface and powerful search functionality.",
     stack: [{name: "Next.js"}, {name: "TypeScript"}, {name: "Zustand"}, {name: "Tailwind CSS"}, {name: "Axios"}, {name: "FastAPI"}, {name:"MongoDB"}, {name:"JWT Authentication"}, {name:"Pydantic"}, {name:"Uvicorn"}],
     image: "",
