@@ -63,6 +63,19 @@ const Work = () => {
             <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
               {project.category} project
             </h2>
+            <p className="text-white/60">
+              {project.description}
+            </p>
+            <ul className="flex gap-4">
+              {project.stack.map((item, index)=> {
+                return ( 
+                  <li key={index} className="text-xl text-accent">
+                    {item.name}
+                    {index != project.stack.length - 1 && ","}
+                  </li>
+                )
+              })}
+            </ul>
           </div>
           <div className="w-full xl:w-[50%]">slider</div>
         </div>
