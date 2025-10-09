@@ -8,10 +8,9 @@ import { FiDownload } from "react-icons/fi";
 
 const Home = () => {
   const handleDownloadCV = () => {
-    // Create a link element and trigger download
     const link = document.createElement('a');
-    link.href = '/resume/Yashvanth__CV 1.pdf'; // Update this path to your actual resume file
-    link.download = 'Yashvanth_R_Resume.pdf'; // Name for the downloaded file
+    link.href = '/resume/Yashvanth__CV 1.pdf'; 
+    link.download = 'Yashvanth_R_Resume.pdf'; 
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
