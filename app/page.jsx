@@ -1,3 +1,5 @@
+"use client";
+
 import Photo from "@/components/Photo";
 import Social from "@/components/Social";
 import Stats from "@/components/Stats";
@@ -5,6 +7,16 @@ import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
 
 const Home = () => {
+  const handleDownloadCV = () => {
+    // Create a link element and trigger download
+    const link = document.createElement('a');
+    link.href = '/resume/Yashvanth__CV 1.pdf'; // Update this path to your actual resume file
+    link.download = 'Yashvanth_R_Resume.pdf'; // Name for the downloaded file
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section className="h-full">
       <div className="container mx-auto h-full">
@@ -18,7 +30,12 @@ const Home = () => {
               I am a frontend developer with experience in designing and developing scalable web solutions, ensuring secure and efficient data handling through robust backend integrations. I have collaborated with cross-functional teams. On the frontend, I have led architecture design using React.js and Next.js to deliver high-performance applications. With hands-on expertise in performance tuning and production debugging, I ensure seamless functionality and reliability of complex systems.
             </p>
             <div className="flex flex-col xl:flex-row items-center gap-8">
-              <Button variant="outline" size="lg" className="uppercase flex items-center gap-2">
+              <Button
+                variant="outline"
+                size="lg"
+                className="uppercase flex items-center gap-2"
+                onClick={handleDownloadCV}
+              >
                 <span>Download CV</span>
                 <FiDownload className="text-xl" />
               </Button>
