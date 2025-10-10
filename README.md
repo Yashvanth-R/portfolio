@@ -169,10 +169,6 @@ The contact form uses a Next.js API route (`/api/contact`) that:
 
 ## 🎨 Customization
 
-### Colors & Theme
-- Update colors in `tailwind.config.js`
-- Modify CSS variables in `app/globals.css`
-
 ### Content
 - Update personal information in components
 - Replace resume file in `public/resume/`
@@ -188,15 +184,6 @@ The contact form uses a Next.js API route (`/api/contact`) that:
 - **Input Validation**: Form data validated on server
 - **Rate Limiting**: Consider adding for production
 - **CORS**: Configured for API routes
-
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
 
 ## 📄 License
 
