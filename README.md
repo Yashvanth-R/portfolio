@@ -167,23 +167,9 @@ The contact form uses a Next.js API route (`/api/contact`) that:
 }
 ```
 
-## 🎨 Customization
-
-### Content
-- Update personal information in components
-- Replace resume file in `public/resume/`
-- Modify social links in `components/Social.jsx`
-
 ### Email Templates
 - Customize email HTML in `app/api/contact/route.js`
 - Update email subject and content
-
-## 🔒 Security Features
-
-- **Environment Variables**: Sensitive data stored securely
-- **Input Validation**: Form data validated on server
-- **Rate Limiting**: Consider adding for production
-- **CORS**: Configured for API routes
 
 ## 📄 License
 
