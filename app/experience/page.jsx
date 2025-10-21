@@ -1,7 +1,7 @@
 "use client";
 
 import { FaHtml5, FaCss3, FaJs, FaReact, FaNodeJs, FaPython, FaGithub, FaDocker } from "react-icons/fa";
-import { SiTailwindcss, SiNextdotjs, SiTypescript, SiExpress} from "react-icons/si";
+import { SiTailwindcss, SiNextdotjs, SiTypescript, SiExpress, SiShadcnui, SiNestjs} from "react-icons/si";
 import { PiFileSqlLight } from "react-icons/pi";
 import { DiMongodb } from "react-icons/di";
 
@@ -86,6 +86,10 @@ const skills = {
       name: "Tailwind CSS",
     },
     {
+      icon: <SiShadcnui />,
+      name: "Shadcn UI",
+    },
+    {
       icon: <FaJs />,
       name: "JavaScript",
     },
@@ -112,6 +116,10 @@ const skills = {
     {
       icon: <SiNextdotjs />,
       name: "Next.js",
+    },
+    {
+      icon: <SiNestjs />,
+      name: "NestJS",
     },
     {
       icon: <FaNodeJs />,

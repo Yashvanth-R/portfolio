@@ -27,20 +27,36 @@ const projects = [
   },
   {
     num: "02",
-    category: "Frontend and Backend",
-    title: "Form Builder",
-    description: "A beautiful, modern note-taking application built with Next.js and FastAPI. Create, organize, and manage your personal notes with an intuitive interface and powerful search functionality.",
-    stack: [{name: "Next.js"}, {name: "TypeScript"}, {name: "Zustand"}, {name: "Tailwind CSS"}, {name: "Axios"}, {name: "FastAPI"}, {name:"MongoDB"}, {name:"JWT Authentication"}, {name:"Pydantic"}, {name:"Uvicorn"}],
+    category: "Frontend",
+    title: "Dynamic Form Builder",
+    description: "A dynamic form builder application with advanced features including 7 field types, real-time preview, drag & drop functionality, and comprehensive validation system. Build and manage forms with an intuitive interface, derived fields calculation, and persistent storage.",
+    stack: [
+      {name: "React"}, 
+      {name: "TypeScript"}, 
+      {name: "Material-UI"}, 
+      {name: "Redux Toolkit"}, 
+      {name: "React Router"},
+      {name: "react-beautiful-dnd"},
+      {name: "Local Storage"}
+    ],
     image: "/assets/projects/form builder.png",
     live:"https://form-builder-r8lpnchkp-yashvanth-rs-projects.vercel.app/create",
     github:"https://github.com/Yashvanth-R/form-builder",
   },
   {
     num: "03",
-    category: "Frontend and Backend",
-    title: "Product Store",
-    description: "A beautiful, modern note-taking application built with Next.js and FastAPI. Create, organize, and manage your personal notes with an intuitive interface and powerful search functionality.",
-    stack: [{name: "Next.js"}, {name: "TypeScript"}, {name: "Zustand"}, {name: "Tailwind CSS"}, {name: "Axios"}, {name: "FastAPI"}, {name:"MongoDB"}, {name:"JWT Authentication"}, {name:"Pydantic"}, {name:"Uvicorn"}],
+    category: "Full Stack MERN",
+    title: "Products Store",
+    description: "A full-featured Products Store demo built with the MERN stack. Features include RESTful API integration, product listing and detail views, reusable Chakra UI components, responsive design, and robust error handling. The application is deployment-ready and easily extensible for additional features.",
+    stack: [
+      {name: "MongoDB"}, 
+      {name: "Express.js"}, 
+      {name: "React.js"}, 
+      {name: "Node.js"}, 
+      {name: "Chakra UI"}, 
+      {name: "RESTful API"},
+      {name: "Responsive Design"}
+    ],
     image: "/assets/projects/product store.png",
     live:"",
     github:"https://github.com/Yashvanth-R/Product-Store",
@@ -71,18 +87,22 @@ const Work = () => {
             <div className="text-8xl leading-none font-extrabold text-outline">
               {project.num}
             </div>
-            <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
-              {project.category} project
-            </h2>
+            <div className="flex flex-col gap-2">
+              <h2 className="text-[32px] font-bold leading-none text-white/60 capitalize">
+                {project.category} project
+              </h2>
+              <h3 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500">
+                {project.title}
+              </h3>
+            </div>
             <p className="text-white/60">
               {project.description}
             </p>
-            <ul className="flex gap-4">
+            <ul className="flex flex-wrap gap-2 mb-4">
               {project.stack.map((item, index)=> {
                 return ( 
-                  <li key={index} className="text-xl text-accent">
+                  <li key={index} className="bg-[#2e2e33] px-4 py-2 rounded-full text-sm text-white/70">
                     {item.name}
-                    {index != project.stack.length - 1 && ","}
                   </li>
                 )
               })}
@@ -116,19 +136,25 @@ const Work = () => {
               </div>
           </div>
           </div>
-          <div className="w-full xl:w-[50%]">
-            <Swiper spaceBetween={30} slidesPerView={1} className="xl:h-[520px] mb-12" onSlideChange={handleSlideChange}>
+          <div className="w-full xl:w-[50%] xl:pl-10">
+            <Swiper 
+              spaceBetween={30} 
+              slidesPerView={1} 
+              className="h-[460px] xl:h-[520px]" 
+              onSlideChange={handleSlideChange}>
               {projects.map((project, index) => {
                 return ( 
                 <SwiperSlide key={index} className="w-full">
-                  <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
-                    <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
+                  <div className="h-[460px] relative group flex justify-center items-center bg-[#181818]">
+                    <div className="absolute inset-0 z-10"></div>
                     <div className="relative w-full h-full">
                       <Image
                         src={project.image}
                         fill
                         className="object-contain"
-                        alt=""
+                        alt={project.title}
+                        priority
+                        sizes="(max-width: 768px) 200vw, 50vw"
                         />
                     </div>
                   </div>
@@ -136,7 +162,7 @@ const Work = () => {
                 );
               })}
               <WorkSliderBtns containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none"
-              btnStyles="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex jsutify-center items-center transition-all" />
+              btnStyles="bg-accent hover:bg-accent-hover text-primary text-[20px] w-[44px] h-[44px] flex jsutify-center items-center transition-all" />
             </Swiper>
           </div>
         </div>
