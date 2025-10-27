@@ -25,9 +25,48 @@ const Home = () => {
             <h1 className="h1 mb-6">
               Hello I'm<br /><span className="text-accent">Yashvanth R</span>
             </h1>
-            <p className="max-w-[500px] mb-9 text-white/80">
-              I am a frontend developer with experience in designing and developing scalable web solutions, ensuring secure and efficient data handling through robust backend integrations. I have collaborated with cross-functional teams. On the frontend, I have led architecture design using React.js and Next.js to deliver high-performance applications. With hands-on expertise in performance tuning and production debugging, I ensure seamless functionality and reliability of complex systems.
-            </p>
+            <div className="max-w-[700px] mb-9 text-white/80 space-y-6">
+              <p className="text-lg leading-relaxed">
+                I am a Frontend & Full Stack Developer focused on building scalable, secure, and high-performance web applications. I design modern user experiences and implement robust frontends using React, Next.js and Tailwind CSS while integrating backend services with Node/Express and APIs for reliable production deployments.
+              </p>
+
+              <p className="text-lg leading-relaxed">
+                I enjoy working across the stack — from frontend architecture and performance optimization to backend integrations, databases (MongoDB, Postgres), and cloud deployments using Docker and AWS. I build solutions that are maintainable, testable, and performant in real-world conditions.
+              </p>
+
+              <div>
+                <h4 className="text-sm text-accent mb-3 uppercase tracking-wide">Key highlights</h4>
+                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-white/80">
+                  <li className="flex items-start gap-3">
+                    <span className="text-accent">●</span>
+                    <span>Designed & deployed full‑stack applications with optimized frontend performance.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-accent">●</span>
+                    <span>Built robust UIs with React, Next.js and Tailwind for responsive experiences.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-accent">●</span>
+                    <span>Experienced in RESTful API integration, authentication, and microservices.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-accent">●</span>
+                    <span>Strong foundation in databases, Git workflows, and containerization (Docker).</span>
+                  </li>
+                </ul>
+              </div>
+
+              {/* <div className="mt-3 flex flex-wrap gap-2">
+                <span className="px-3 py-1 bg-[#111214] text-sm rounded-full border border-white/6">React</span>
+                <span className="px-3 py-1 bg-[#111214] text-sm rounded-full border border-white/6">Next.js</span>
+                <span className="px-3 py-1 bg-[#111214] text-sm rounded-full border border-white/6">Tailwind CSS</span>
+                <span className="px-3 py-1 bg-[#111214] text-sm rounded-full border border-white/6">Node.js</span>
+                <span className="px-3 py-1 bg-[#111214] text-sm rounded-full border border-white/6">Express</span>
+                <span className="px-3 py-1 bg-[#111214] text-sm rounded-full border border-white/6">MongoDB</span>
+                <span className="px-3 py-1 bg-[#111214] text-sm rounded-full border border-white/6">Docker</span>
+                <span className="px-3 py-1 bg-[#111214] text-sm rounded-full border border-white/6">AWS</span>
+              </div> */}
+            </div>
             <div className="flex flex-col xl:flex-row items-center gap-8">
               <Button
                 variant="outline"
