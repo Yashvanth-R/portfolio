@@ -1,5 +1,6 @@
 import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next";
 import Header from "@/components/Header";
 import PageTransition from "@/components/PageTransition";
 
@@ -22,6 +23,7 @@ export default function RootLayout({ children }) {
           <PageTransition>
             {children}
           </PageTransition>
+          <Analytics />
         </body>
     </html>
   );
