@@ -2,7 +2,7 @@
 
 A modern, responsive portfolio website built with Next.js 14, featuring a contact form with email functionality, resume download, and smooth animations.
 
-## 🚀 Features
+## Features
 
 - **Modern Design**: Clean, professional UI with dark theme
 - **Responsive Layout**: Optimized for all devices and screen sizes
