@@ -60,6 +60,27 @@ const projects = [
     image: "/assets/projects/product store.png",
     live:"",
     github:"https://github.com/Yashvanth-R/Product-Store",
+  },
+  {
+    num: "04",
+    category: "Microservices",
+    title: "Distributed Microservices System",
+    description: "A fully containerized microservices architecture built using Node.js, Express, MongoDB, and RabbitMQ. The system demonstrates event-driven communication between independently deployable services, featuring user management, task management, and asynchronous notification processing. Includes REST APIs, database persistence, message queues, and Docker-based orchestration.",
+    stack: [
+      { name: "Node.js" },
+      { name: "Express.js" },
+      { name: "MongoDB" },
+      { name: "Mongoose" },
+      { name: "RabbitMQ" },
+      { name: "Docker" },
+      { name: "Docker Compose" },
+      { name: "AMQP (amqplib)" },
+      { name: "RESTful API" },
+      { name: "Event-Driven Architecture" }
+    ],
+    image: "/assets/projects/microservices.png",
+    live:"",
+    github:"https://github.com/Yashvanth-R/microservices",
   }
 ];
 
