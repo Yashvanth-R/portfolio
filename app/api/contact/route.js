@@ -44,21 +44,21 @@ export async function POST(request) {
       replyTo: email
     };
 
-    // Try SendGrid first (for production) - temporarily disabled
-    // if (process.env.SENDGRID_API_KEY && process.env.SENDGRID_API_KEY !== 'your_sendgrid_api_key_here') {
-    //   try {
-    //     sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-    //     await sgMail.send(emailContent);
+    // Try SendGrid first (for production)
+    if (process.env.SENDGRID_API_KEY && process.env.SENDGRID_API_KEY !== 'your_sendgrid_api_key_here') {
+      try {
+        sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+        await sgMail.send(emailContent);
         
-    //     return NextResponse.json({ 
-    //       success: true, 
-    //       message: 'Email sent successfully via SendGrid' 
-    //     });
-    //   } catch (sendGridError) {
-    //     console.error('SendGrid error:', sendGridError);
-    //     // Fall back to SMTP
-    //   }
-    // }
+        return NextResponse.json({ 
+          success: true, 
+          message: 'Email sent successfully via SendGrid' 
+        });
+      } catch (sendGridError) {
+        console.error('SendGrid error:', sendGridError);
+        // Fall back to SMTP
+      }
+    }
 
     // Use Gmail SMTP
     if (process.env.SMTP_PASS && process.env.SMTP_PASS !== 'your_gmail_app_password_here') {
