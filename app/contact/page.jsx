@@ -105,7 +105,7 @@ const Contact = () => {
           <div className="xl:w-[54%] order-2 xl:order-none">
             <form onSubmit={handleSubmit} className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl">
               <h3 className="text-4xl text-accent">Lets work together</h3>
-              <p className="text-white/60">I am a frontend developer with full stack developer with experience in designing and developing scalable web solutions, ensuring secure and efficient data handling through robust backend integrations.</p>
+              <p className="text-white/60">I am a full stack developer with experience in designing and developing scalable web solutions, ensuring secure and efficient data handling through robust backend integrations.</p>
               
               {status === 'success' && (
                 <div className="p-4 bg-green-500/20 border border-green-500 rounded-md text-green-400">
@@ -159,9 +159,9 @@ const Contact = () => {
                 <SelectContent>
                   <SelectGroup>
                     <SelectLabel>Select a service</SelectLabel>
-                    <SelectItem value="frontend developer">Frontend Developer</SelectItem>
+                    <SelectItem value="frontend developer">Full Stack Developer</SelectItem>
                     <SelectItem value="backend developer">Backend Developer</SelectItem>
-                    <SelectItem value="fullstack developer">Full Stack Developer</SelectItem>
+                    <SelectItem value="fullstack developer">Frontend Developer</SelectItem>
                   </SelectGroup>
                 </SelectContent>
               </Select>
