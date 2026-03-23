@@ -21,13 +21,13 @@ const Home = () => {
       <div className="container mx-auto h-full">
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
           <div className="text-center xl:text-left order-2 xl:order-none">
-            <span className="text-xl">Frontend Developer</span>
+            <span className="text-xl">Full Stack Developer</span>
             <h1 className="h1 mb-6">
               Hello I'm<br /><span className="text-accent">Yashvanth R</span>
             </h1>
             <div className="max-w-[700px] mb-9 text-white/80 space-y-6">
               <p className="text-lg leading-relaxed">
-                I am a Frontend & Full Stack Developer focused on building scalable, secure, and high-performance web applications. I design modern user experiences and implement robust frontends using React, Next.js and Tailwind CSS while integrating backend services with Node/Express and APIs for reliable production deployments.
+                I am a Full Stack Developer focused on building scalable, secure, and high-performance web applications. I design modern user experiences and implement robust frontends using React, Next.js and Tailwind CSS while integrating backend services with Node/Express and APIs for reliable production deployments.
               </p>
 
               <p className="text-lg leading-relaxed">
