@@ -78,7 +78,7 @@ const projects = [
       { name: "RESTful API" },
       { name: "Event-Driven Architecture" }
     ],
-    image: "/assets/projects/microservices.png",
+    image: "/assets/projects/microservices1.png",
     live:"",
     github:"https://github.com/Yashvanth-R/microservices",
   }
