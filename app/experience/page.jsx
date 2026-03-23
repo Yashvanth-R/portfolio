@@ -132,7 +132,7 @@ const skills = {
     {
       icon: <SiRabbitmq />,
       name: "RabbitMQ",
-    }
+    },
     {
       icon: <FaGithub />,
       name: "Git & GitHub",
