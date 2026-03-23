@@ -1,13 +1,13 @@
 "use client";
 
-import { FaHtml5, FaCss3, FaJs, FaReact, FaNodeJs, FaPython, FaGithub, FaDocker } from "react-icons/fa";
-import { SiTailwindcss, SiNextdotjs, SiTypescript, SiExpress, SiShadcnui, SiNestjs} from "react-icons/si";
+import { FaHtml5, FaCss3, FaJs, FaReact, FaNodeJs, FaPython, FaGithub, FaDocker, FaAws } from "react-icons/fa";
+import { SiTailwindcss, SiNextdotjs, SiTypescript, SiExpress, SiShadcnui, SiNestjs, SiRabbitmq } from "react-icons/si";
 import { PiFileSqlLight } from "react-icons/pi";
 import { DiMongodb } from "react-icons/di";
 
 const about = {
   title: "About Me",
-  description: "I am a passionate frontend developer with a focus on creating dynamic and responsive web applications. I have experience in both front-end and back-end development, and I enjoy working with modern technologies to build efficient and user-friendly interfaces.",
+  description: "I am a passionate full stack developer with a focus on creating dynamic and responsive web applications. I have experience in both front-end and back-end development, and I enjoy working with modern technologies to build efficient and user-friendly interfaces.",
   info: [
     {
       fieldName: "Name",
@@ -19,7 +19,7 @@ const about = {
     },
     {
       fieldName: "Experience",
-      fieldValue: "1+ Years"
+      fieldValue: "1.5+ Years"
     },
     {
       fieldName: "Email",
@@ -31,11 +31,11 @@ const about = {
 const experience = {
   icon: "/assets/resume/badge.svg",
   title: "Experience",
-  description: "I have 1+ years of experience in frontend development, working with various technologies and frameworks to deliver high-quality web applications.",
+  description: "I have 1.5+ years of experience in frontend development and full stack development, working with various technologies and frameworks to deliver high-quality web applications.",
   items: [
     {
       company: "Cybrisk Tech Pvt Ltd",
-      designation: "Frontend Developer",
+      designation: "Full Stack Developer",
       duration: "2024 - Present",
     },
     {
@@ -130,6 +130,10 @@ const skills = {
       name: "Express.js",
     },
     {
+      icon: <SiRabbitmq />,
+      name: "RabbitMQ",
+    }
+    {
       icon: <FaGithub />,
       name: "Git & GitHub",
     },
@@ -137,6 +141,10 @@ const skills = {
       icon: <FaDocker />,
       name: "Docker",
     },
+    {
+      icon: <FaAws />,
+      name: "AWS",
+    }
   ]
 }
 
