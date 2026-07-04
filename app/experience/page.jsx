@@ -1,275 +1,141 @@
 "use client";
 
-import { FaHtml5, FaCss3, FaJs, FaReact, FaNodeJs, FaPython, FaGithub, FaDocker, FaAws } from "react-icons/fa";
-import { SiTailwindcss, SiNextdotjs, SiTypescript, SiExpress, SiShadcnui, SiNestjs, SiRabbitmq } from "react-icons/si";
-import { PiFileSqlLight } from "react-icons/pi";
+import { motion } from "framer-motion";
+import { BriefcaseBusiness, GraduationCap, MapPin, Mail, Phone, Sparkles } from "lucide-react";
+import { FaAws, FaCss3, FaDocker, FaGithub, FaHtml5, FaJs, FaNodeJs, FaPython, FaReact } from "react-icons/fa";
 import { DiMongodb } from "react-icons/di";
+import { PiFileSqlLight } from "react-icons/pi";
+import { SiExpress, SiNestjs, SiNextdotjs, SiRabbitmq, SiShadcnui, SiTailwindcss, SiTypescript } from "react-icons/si";
 
-const about = {
-  title: "About Me",
-  description: "I am a passionate full stack developer with a focus on creating dynamic and responsive web applications. I have experience in both front-end and back-end development, and I enjoy working with modern technologies to build efficient and user-friendly interfaces.",
-  info: [
-    {
-      fieldName: "Name",
-      fieldValue: "Yashvanth R"
-    },
-    {
-      fieldName: "Phone",
-      fieldValue: "(+91) 9591622064"
-    },
-    {
-      fieldName: "Experience",
-      fieldValue: "1.5+ Years"
-    },
-    {
-      fieldName: "Email",
-      fieldValue: "yashvanthr064@gmail.com"
-    },
-  ]
+const profile = [
+  { icon: <Phone className="h-4 w-4" />, label: "Phone", value: "(+91) 9591622064" },
+  { icon: <Mail className="h-4 w-4" />, label: "Email", value: "yashvanthr064@gmail.com" },
+  { icon: <MapPin className="h-4 w-4" />, label: "Location", value: "Bangalore, India" },
+  { icon: <Sparkles className="h-4 w-4" />, label: "Experience", value: "1.8+ Years" },
+];
+
+const experience = [
+  { company: "Cybrisk Tech Pvt Ltd", role: "Full Stack Developer", duration: "2024 - Present" },
+  { company: "IIIT-Allahabad", role: "Project Intern", duration: "2022 - 2023" },
+];
+
+const education = [
+  { institution: "Global Academy of Technology", degree: "B.E in AI & Data Science", duration: "2020 - 2024" },
+  { institution: "M.E.S PU College", degree: "Pre-University Course", duration: "2018 - 2020" },
+  { institution: "Max Muller High School", degree: "Secondary School", duration: "2017 - 2018" },
+];
+
+const skills = [
+  { name: "HTML5", Icon: FaHtml5 },
+  { name: "CSS", Icon: FaCss3 },
+  { name: "Tailwind", Icon: SiTailwindcss },
+  { name: "Shadcn UI", Icon: SiShadcnui },
+  { name: "JavaScript", Icon: FaJs },
+  { name: "TypeScript", Icon: SiTypescript },
+  { name: "Python", Icon: FaPython },
+  { name: "SQL", Icon: PiFileSqlLight },
+  { name: "MongoDB", Icon: DiMongodb },
+  { name: "React", Icon: FaReact },
+  { name: "Next.js", Icon: SiNextdotjs },
+  { name: "NestJS", Icon: SiNestjs },
+  { name: "Node.js", Icon: FaNodeJs },
+  { name: "Express", Icon: SiExpress },
+  { name: "RabbitMQ", Icon: SiRabbitmq },
+  { name: "GitHub", Icon: FaGithub },
+  { name: "Docker", Icon: FaDocker },
+  { name: "AWS", Icon: FaAws },
+];
+
+const TimelineCard = ({ item, type }) => (
+  <div className="theme-panel rounded-lg p-5">
+    <div className="mb-4 flex items-center justify-between gap-4">
+      <span className="rounded-full bg-accent/15 px-3 py-1 text-sm font-semibold text-accent">{item.duration}</span>
+      <span className="text-[#f8f2e8]/40">{type}</span>
+    </div>
+    <h3 className="text-xl font-semibold leading-snug text-[#fff8ec]">{item.role || item.degree}</h3>
+    <p className="mt-3 text-[#f8f2e8]/58">{item.company || item.institution}</p>
+  </div>
+);
+
+const Experience = () => {
+  return (
+    <main className="page-shell">
+      <motion.section
+        initial={{ opacity: 0, y: 24 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        className="container relative z-10 mx-auto py-10 xl:py-16"
+      >
+        <div className="grid gap-8 xl:grid-cols-[0.8fr_1.2fr]">
+          <aside className="theme-panel h-max rounded-lg p-6 xl:sticky xl:top-8">
+            <span className="theme-chip rounded-full px-4 py-2 text-sm">About me</span>
+            <h1 className="mt-6 text-4xl font-semibold leading-tight text-[#fff8ec] xl:text-5xl">
+              Developer with a product-first full-stack toolkit.
+            </h1>
+            <p className="mt-5 leading-8 text-[#f8f2e8]/64">
+              I build dynamic web applications from interface to backend, with a focus on
+              clean user experiences, practical architecture, and maintainable delivery.
+            </p>
+            <div className="mt-7 grid gap-3">
+              {profile.map((item) => (
+                <div key={item.label} className="flex items-center gap-4 rounded-lg border border-white/10 bg-white/[0.04] p-4">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-md bg-accent/15 text-accent">{item.icon}</div>
+                  <div>
+                    <p className="text-sm text-[#f8f2e8]/45">{item.label}</p>
+                    <p className="font-medium text-[#fff8ec]">{item.value}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </aside>
+
+          <div className="space-y-8">
+            <section>
+              <div className="mb-5 flex items-center gap-3">
+                <BriefcaseBusiness className="h-6 w-6 text-accent" />
+                <h2 className="text-3xl font-semibold text-[#fff8ec]">Experience</h2>
+              </div>
+              <div className="grid gap-4 md:grid-cols-2">
+                {experience.map((item) => <TimelineCard key={item.company} item={item} type="Work" />)}
+              </div>
+            </section>
+
+            <section>
+              <div className="mb-5 flex items-center gap-3">
+                <GraduationCap className="h-6 w-6 text-accent" />
+                <h2 className="text-3xl font-semibold text-[#fff8ec]">Education</h2>
+              </div>
+              <div className="grid gap-4 lg:grid-cols-3">
+                {education.map((item) => <TimelineCard key={item.institution} item={item} type="Study" />)}
+              </div>
+            </section>
+
+            <section className="theme-panel rounded-lg p-6">
+              <div className="mb-5 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+                <div>
+                  <span className="text-sm font-semibold text-accent">Toolkit</span>
+                  <h2 className="text-3xl font-semibold text-[#fff8ec]">Skills I work with</h2>
+                </div>
+                <p className="max-w-xl text-sm leading-6 text-[#f8f2e8]/55">
+                  A practical stack for frontend craft, backend services, databases, messaging, and deployment.
+                </p>
+              </div>
+              <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
+                {skills.map(({ name, Icon }) => (
+                  <div key={name} className="group rounded-lg border border-white/10 bg-white/[0.045] p-4 text-center transition-all hover:-translate-y-1 hover:border-accent/60 hover:bg-accent/10">
+                    <div className="mx-auto mb-3 flex h-11 w-11 items-center justify-center rounded-md bg-white/[0.06] text-2xl text-[#fff8ec] transition-colors group-hover:text-accent">
+                      <Icon />
+                    </div>
+                    <p className="text-sm text-[#f8f2e8]/70">{name}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
+          </div>
+        </div>
+      </motion.section>
+    </main>
+  );
 };
 
-const experience = {
-  icon: "/assets/resume/badge.svg",
-  title: "Experience",
-  description: "I have 1.5+ years of experience in frontend development and full stack development, working with various technologies and frameworks to deliver high-quality web applications.",
-  items: [
-    {
-      company: "Cybrisk Tech Pvt Ltd",
-      designation: "Full Stack Developer",
-      duration: "2024 - Present",
-    },
-    {
-      company: "IIIT-Allahabad",
-      designation: "Project Intern",
-      duration: "2022-2023",
-    },
-  ]
-}
-
-const education = {
-  icon: "/assets/resume/cap.svg",
-  title: "Education",
-  description: "I have completed my B.E in AI & Data Science from Global Academy of Technology, Bangalore. Here are some of my educational qualifications:",
-  items: [
-    {
-      institution: "Global Academy of Technology",
-      degree: "B.E in AI & Data Science",
-      duration: "2020 - 2024",
-    },
-    {
-      institution: "M.E.S PU COLLEGE",
-      degree: "Pre-University Course",
-      duration: "2018 - 2020",
-    },
-    {
-      institution: "Max Muller High School",
-      degree: "Secondary School",
-      duration: "2017 - 2018",
-    },
-  ]
-}
-
-const skills = {
-  title: "Skills",
-  description: "Here are some of the technologies and tools I have worked with:",
-  skillList: [
-    {
-      icon: <FaHtml5 />,
-      name: "HTML5",
-    },
-    {
-      icon: <FaCss3 />,
-      name: "CSS",
-    },
-    {
-      icon: <SiTailwindcss />,
-      name: "Tailwind CSS",
-    },
-    {
-      icon: <SiShadcnui />,
-      name: "Shadcn UI",
-    },
-    {
-      icon: <FaJs />,
-      name: "JavaScript",
-    },
-    {
-      icon: <SiTypescript />,
-      name: "TypeScript",
-    },
-    {
-      icon: <FaPython />,
-      name: "Python",
-    },
-    {
-      icon: <PiFileSqlLight />,
-      name: "SQL",
-    },
-    {
-      icon: <DiMongodb />,
-      name: "MongoDB",
-    },
-    {
-      icon: <FaReact />,
-      name: "React.js",
-    },
-    {
-      icon: <SiNextdotjs />,
-      name: "Next.js",
-    },
-    {
-      icon: <SiNestjs />,
-      name: "NestJS",
-    },
-    {
-      icon: <FaNodeJs />,
-      name: "Node.js",
-    },
-    {
-      icon: <SiExpress />,
-      name: "Express.js",
-    },
-    {
-      icon: <SiRabbitmq />,
-      name: "RabbitMQ",
-    },
-    {
-      icon: <FaGithub />,
-      name: "Git & GitHub",
-    },
-    {
-      icon: <FaDocker />,
-      name: "Docker",
-    },
-    {
-      icon: <FaAws />,
-      name: "AWS",
-    }
-  ]
-}
-
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { delay, motion } from "framer-motion";
-
-const Resume = () => {
-  return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{
-        opacity: 1,
-        transition: { delay: 1.4, duration: 0.4, ease: "easeIn" },
-      }}
-      className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0"
-      >
-        <div className="container mx-auto">
-          <Tabs defaultValue="about" className="flex flex-col xl:flex-row gap-[60px]">
-            <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
-              <TabsTrigger value="about">About Me</TabsTrigger>
-              <TabsTrigger value="experience">Experience</TabsTrigger>
-              <TabsTrigger value="education">Education</TabsTrigger>
-              <TabsTrigger value="skills">Skills</TabsTrigger>
-            </TabsList>
-            <div className="min-h-[70vh] w-full">
-              <TabsContent value="about" className="w-full text-center xl:text-left">
-                <div className="flex flex-col gap-[30px]">
-                  <h3 className="text-4xl font-bold">{about.title}</h3>
-                  <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{about.description}</p>
-                  <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
-                    {about.info.map((item, index) => {
-                      return (
-                        <li key={index} className="flex items-center justify-center xl:justify-start gap-4">
-                          <span className="text-white/60">{item.fieldName}</span>
-                          <span className="text-xl">{item.fieldValue}</span>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </div>
-              </TabsContent>
-
-              <TabsContent value="experience" className="w-full">
-                <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                  <h3 className="text-4xl font-bold">{experience.title}</h3>
-                    <p>
-                      {experience.description}
-                    </p>
-                    <ScrollArea className="h-[400px]">
-                      <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
-                        {experience.items.map((item, index) => {
-                          return (
-                            <li key={index} className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1">
-                              <span className="text-accent">{item.duration}</span>
-                              <h3 className="text-xl max-w-[300px] min-h-[60px] text-center lg:text-left">{item.designation}</h3>
-                              <div className="flex items-center gap-3">
-                                <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
-                                  <p className="text-white/60">{item.company}</p>
-                              </div>
-                            </li>
-                          );
-                        })}
-                      </ul>
-                    </ScrollArea>
-                </div>
-              </TabsContent>
-
-              <TabsContent value="education" className="w-full">
-                <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                  <h3 className="text-4xl font-bold">{education.title}</h3>
-                    <p>
-                      {education.description}
-                    </p>
-                    <ScrollArea className="h-[400px]">
-                      <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
-                        {education.items.map((item, index) => {
-                          return (
-                            <li key={index} className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1">
-                              <span className="text-accent">{item.duration}</span>
-                              <h3 className="text-xl max-w-[300px] min-h-[60px] text-center lg:text-left">{item.degree}</h3>
-                              <div className="flex items-center gap-3">
-                                <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
-                                  <p className="text-white/60">{item.institution}</p>
-                              </div>
-                            </li>
-                          );
-                        })}
-                      </ul>
-                    </ScrollArea>
-                </div>
-              </TabsContent>
-
-              <TabsContent value="skills" className="w-full h-full">
-                <div className="flex flex-col gap-[30px]">
-                  <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                    <h3 className="text-4xl font-bold">{skills.title}</h3>
-                    <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{skills.description}</p>
-                  </div>
-                  <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
-                    {skills.skillList.map((skill, index) => {
-                      return (
-                      <li key={index}>
-                        <TooltipProvider delayDuration={100}>
-                          <Tooltip>
-                            <TooltipTrigger className="w-full h-[100px] bg-[#232329] rounded-xl flex justify-center items-center group">
-                              <div className="text-4xl group-hover:text-accent transition-all duration-300">{skill.icon}</div>
-                            </TooltipTrigger>
-                            <TooltipContent>
-                              <p className="capitalize">{skill.name}</p>
-                            </TooltipContent>
-                          </Tooltip>
-                        </TooltipProvider>
-                      </li>
-                      );
-                    })}
-                  </ul>
-                </div>
-              </TabsContent>
-            </div>
-          </Tabs>
-        </div>
-    </motion.div>
-  )
-}
-
-export default Resume;
+export default Experience;

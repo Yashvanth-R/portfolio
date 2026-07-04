@@ -35,11 +35,11 @@ const MobileNav = () => {
             <SheetTrigger className="flex justify-center items-center">
                 <CiMenuFries className="text-[32px] text-accent"/>
             </SheetTrigger>
-            <SheetContent className="flex flex-col">
+            <SheetContent className="flex flex-col border-white/10 bg-[#101016] text-[#f8f2e8]">
                 <div className="mt-32 mb-40 text-center text-2xl">
                     <Link href="/">
                         <h1 className="text-4xl font-semibold">
-                            Yashvanth<span className="text-accent">.</span>
+                            Yashvanth<span className="text-accent"> R</span>
                         </h1>
                     </Link>
                 </div>
@@ -50,9 +50,7 @@ const MobileNav = () => {
                                 href={link.path} 
                                 key={index} 
                                 prefetch={true}
-                                className={`${
-                                    link.path === pathname && "text-accent border-b-2 border-accent"}
-                                    text-xl capitalize hover:text-accent transition-all`}
+                                className={`${link.path === pathname ? "bg-accent text-primary" : "text-white/70 hover:text-white"} rounded-full px-6 py-2 text-xl capitalize transition-all`}
                             >
                                 {link.name}
                             </Link>
