@@ -5,7 +5,7 @@ import { BriefcaseBusiness, GraduationCap, MapPin, Mail, Phone, Sparkles } from 
 import { FaAws, FaCss3, FaDocker, FaGithub, FaHtml5, FaJs, FaNodeJs, FaPython, FaReact } from "react-icons/fa";
 import { DiMongodb } from "react-icons/di";
 import { PiFileSqlLight } from "react-icons/pi";
-import { SiExpress, SiNestjs, SiNextdotjs, SiRabbitmq, SiShadcnui, SiTailwindcss, SiTypescript } from "react-icons/si";
+import { SiExpress, SiNestjs, SiNextdotjs, SiRabbitmq, SiShadcnui, SiTailwindcss, SiTypescript, SiPrometheus, SiGrafana, SiSupabase, SiFirebase } from "react-icons/si";
 
 const profile = [
   { icon: <Phone className="h-4 w-4" />, label: "Phone", value: "(+91) 9591622064" },
@@ -42,8 +42,12 @@ const skills = [
   { name: "Express", Icon: SiExpress },
   { name: "RabbitMQ", Icon: SiRabbitmq },
   { name: "GitHub", Icon: FaGithub },
+  { name: "Supabase", Icon: SiSupabase },
+  { name: "Firebase", Icon: SiFirebase },
   { name: "Docker", Icon: FaDocker },
   { name: "AWS", Icon: FaAws },
+  { name: "Prometheus", Icon: SiPrometheus },
+  { name: "Grafana", Icons: SiGrafana }
 ];
 
 const TimelineCard = ({ item, type }) => (
