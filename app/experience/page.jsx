@@ -47,7 +47,7 @@ const skills = [
   { name: "Docker", Icon: FaDocker },
   { name: "AWS", Icon: FaAws },
   { name: "Prometheus", Icon: SiPrometheus },
-  { name: "Grafana", Icons: SiGrafana }
+  { name: "Grafana", Icon: SiGrafana }
 ];
 
 const TimelineCard = ({ item, type }) => (
